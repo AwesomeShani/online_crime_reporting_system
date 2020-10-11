@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,6 @@ class NewsPage extends StatefulWidget {
 }
 
 class _NewsPageState extends State<NewsPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,28 +19,28 @@ class _NewsPageState extends State<NewsPage> {
     );
   }
 
- Widget _buildBody(BuildContext context) {
+  Widget _buildBody(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
       stream: Firestore.instance.collection('news').snapshots(),
-    builder: (context, snapshot){
-        if(!snapshot.hasData) return LinearProgressIndicator();
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) return LinearProgressIndicator();
         return _buildList(context, snapshot.data.documents);
-    },
-   );
- }
+      },
+    );
+  }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return ListView(
       padding: const EdgeInsets.only(top: 20.0),
-      children: snapshot.map((data) => _buildListItem(context,data)).toList(),
+      children: snapshot.map((data) => _buildListItem(context, data)).toList(),
     );
   }
 
-Widget  _buildListItem(BuildContext context, DocumentSnapshot data) {
+  Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
     final record = Record.fromSnapshot(data);
 
     return Padding(
-      key: ValueKey(record.status),
+      key: ValueKey(record.crime),
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       child: Container(
         decoration: BoxDecoration(
@@ -50,28 +48,28 @@ Widget  _buildListItem(BuildContext context, DocumentSnapshot data) {
           borderRadius: BorderRadius.circular(5.0),
         ),
         child: ListTile(
-          title: Text(record.status),
-          trailing: Text(record.referredto),
-          onTap: ()=>print(record),
+          title: Text(record.crime),
+          trailing: Text(record.status),
+          onTap: () => print(record),
         ),
       ),
     );
+  }
 }
 
- }
 class Record {
   final String status;
-  final String referredto;
+
+  final String crime;
   final DocumentReference reference;
 
   Record.fromMap(Map<String, dynamic> map, {this.reference})
       : status = map['Status'],
-        referredto = map['Referred To'];
+        crime = map['Crime'];
 
   Record.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
 
   @override
-  String toString() => " Status: $status , Referred To: $referredto";
-
+  String toString() => "Crime: $crime ,Status: $status";
 }
