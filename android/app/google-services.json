@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "616602938117",
+    "firebase_url": "https://online-crime-reporting-s-1c148.firebaseio.com",
+    "project_id": "online-crime-reporting-s-1c148",
+    "storage_bucket": "online-crime-reporting-s-1c148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616602938117:android:6bc217ed7657707946256c",
+        "android_client_info": {
+          "package_name": "com.example.onlinecrimereportingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616602938117-m7g48r6g0b4lc3giqstencfra82qh8rm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onlinecrimereportingsystem",
+            "certificate_hash": "a16cc5a12373fc585f63dba5b1341f40cd7c3e99"
+          }
+        },
+        {
+          "client_id": "616602938117-6a765n0guup8vr7bsmjve1gscc62impp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUoRDPbuds4l2E5SBBG0s5k-Ul5sl8358"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616602938117-6a765n0guup8vr7bsmjve1gscc62impp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
