@@ -97,7 +97,7 @@ class _EditReportsPageState extends State<EditReportsPage> {
         actions: <Widget>[
           FlatButton(
             child: Text(
-              '',
+              'Sumbit',
               style: TextStyle(color: Colors.white, fontSize: 20.0),
             ),
             onPressed: _submit,
