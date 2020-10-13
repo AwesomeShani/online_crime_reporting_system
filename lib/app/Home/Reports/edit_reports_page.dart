@@ -72,6 +72,9 @@ class _EditReportsPageState extends State<EditReportsPage> {
           district: _district,
           tehsil: _tehsil,
         );
+        //
+
+        //
         await widget.database.setReport(report);
         Navigator.of(context).pop();
         PlatformAlertDialouge(
@@ -155,9 +158,9 @@ class _EditReportsPageState extends State<EditReportsPage> {
         initialValue: _location,
         decoration: InputDecoration(
           labelText: 'COMPLAINT LOCATION',
+          suffixIcon: Icon(Icons.location_on),
           ),
         onSaved: (value) => _location = value,
-
       ),
       TextFormField(
         initialValue: _province,
@@ -180,6 +183,7 @@ class _EditReportsPageState extends State<EditReportsPage> {
         ),
         onSaved: (value) => _tehsil = value,
       ),
+
     ];
   }
 }

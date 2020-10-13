@@ -10,6 +10,7 @@ class Report {
       @required this.district,
       @required this.province,
       @required this.tehsil});
+
   final String id;
   final String crimeType;
   final String details;
@@ -18,7 +19,7 @@ class Report {
   final String district;
   final String tehsil;
 
-  //TODO: Factory Constructor
+//TODO: Factory Constructor
   factory Report.fromMap(Map<String, dynamic> data, String documentId) {
     if (data == null) {
       return null;
@@ -46,10 +47,9 @@ class Report {
       'CrimeType': crimeType,
       'Details': details,
       'Location': location,
-      'Province': province,
       'District': district,
+      'Province': province,
       'Tehsil': tehsil,
-
     };
   }
 }

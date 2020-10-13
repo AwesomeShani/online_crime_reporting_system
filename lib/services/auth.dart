@@ -60,7 +60,7 @@ class Auth implements AuthBase {
       } else {
         throw PlatformException(
           code: 'ERROR_MISSING_GOOGLE_AUTH_TOKEN',
-          message: 'MIssing Google Auth Token',
+          message: 'Missing Google Auth Token',
         );
       }
     } else {
