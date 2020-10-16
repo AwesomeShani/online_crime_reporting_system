@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     return{
       TabItem.Reports:(_)=> ReportsPage(),
       TabItem.Search:(_)=> NewsPage(),
-      TabItem.Account:(_)=> AccountPage(),
+      TabItem.Account:(_)=> Account(),
     };
   }
 

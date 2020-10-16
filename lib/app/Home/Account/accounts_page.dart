@@ -4,7 +4,7 @@ import 'package:onlinecrimereportingsystem/common_widgets/platform_alert_dialoug
 import 'package:onlinecrimereportingsystem/services/auth.dart';
 import 'package:provider/provider.dart';
 
-class AccountPage extends StatelessWidget {
+class Account extends StatelessWidget {
   Future<void> _signOut(BuildContext context) async {
     try {
       final auth = Provider.of<AuthBase>(context);

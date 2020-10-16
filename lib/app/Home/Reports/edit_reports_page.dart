@@ -147,8 +147,8 @@ class _EditReportsPageState extends State<EditReportsPage> {
         decoration: InputDecoration(labelText: 'CRIME DETAILS'),
         initialValue: _details,
         // TODO: Validator is optional.. keep or delete;
-        minLines: 2,
-        maxLines: 4,
+        minLines: 4,
+        maxLines: 8,
         expands: false,
         validator: (value) => value.isNotEmpty ? null : 'Provide a Cime Details',
         onSaved: (value) => _details = value,
@@ -156,6 +156,8 @@ class _EditReportsPageState extends State<EditReportsPage> {
       TextFormField(
         focusNode: FocusNode(),
         initialValue: _location,
+        minLines: 2,
+        maxLines: 4,
         decoration: InputDecoration(
           labelText: 'COMPLAINT LOCATION',
           suffixIcon: Icon(Icons.location_on),
